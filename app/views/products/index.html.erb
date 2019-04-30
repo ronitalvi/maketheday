@@ -1,0 +1,18 @@
+
+<ul>
+  <% @products.each do |product|   %>
+
+  <li><%= product.category.name%></li>
+  <li><%= product.name %></li>
+
+
+  <%= link_to 'show', product_path(product) %>
+
+
+
+
+
+  <% end %>
+
+
+  </ul>

@@ -1,0 +1,2 @@
+class Atolyeler < ApplicationRecord
+end

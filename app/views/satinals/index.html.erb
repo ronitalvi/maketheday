@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h1>Atolyeler</h1>
+    <% @satinals.each do |satinal| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= link_to image_tag(satinal.photo_url), satinal_path(satinal) %>
+          <div class="caption">
+            <h3><%= link_to satinal.title, satinal_path(satinal) %></h3>
+            <p><%= satinal.location %></p>
+            <p>Amount: <%= humanized_money_with_symbol(satinal.price) %></p>
+            <p>$$$</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
