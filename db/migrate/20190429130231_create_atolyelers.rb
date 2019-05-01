@@ -1,6 +1,6 @@
-class CreateAtolyeler < ActiveRecord::Migration[5.2]
+class CreateAtolyelers < ActiveRecord::Migration[5.2]
   def change
-    create_table :atolyeler do |t|
+    create_table :atolyelers do |t|
       t.string :picture_url
 
       t.timestamps
