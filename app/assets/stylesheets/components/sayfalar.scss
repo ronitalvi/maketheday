@@ -1,0 +1,102 @@
+.referans{
+
+}
+
+.baslik{
+    border-bottom:  rgba(10, 10, 10, 0.3) solid 3px;
+    text-align: left;
+}
+
+.scroller {
+  div {
+    height: 350px;
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #000;
+}
+
+.slick-next {
+  right: -5px;
+}
+
+.slick-prev {
+  left: -5px;
+}
+
+
+.slaytlar{
+  height: 55vh;
+  margin-top: 120px;
+  margin-bottom: 80px;
+
+  //      justify-self: center;
+  // align-self: center;
+}
+
+.biz{
+    margin:auto;
+overflow: hidden;
+padding: 1rem 3rem;
+ display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.anacardlar{
+  margin: 30px;
+grid-template-columns: 1fr 1fr 1fr;
+display: grid;
+grid-gap: 20px;
+text-align: center;
+}
+
+.ancard{
+  height: 300px;
+  width: 300px;
+       justify-self: center;
+  align-self: center;
+
+}
+
+
+@media screen and (max-width:991px){
+.anacardlar{
+grid-template-columns: 1fr 1fr;
+display: grid;
+grid-gap: 20px;
+text-align: center;
+  margin: 30px ;
+
+}
+.ancard{
+  height: 300px;
+  width: 300px;
+       justify-self: center;
+  align-self: center;
+
+}
+}
+
+
+@media screen and (max-width:551px){
+.anacardlar{
+grid-template-columns: 1fr ;
+display: grid;
+grid-gap: 124px;
+text-align: center;
+  margin-bottom: 118px;
+}
+  .ancard{
+  height: 200px;
+  width: 200px;
+       justify-self: center;
+  align-self: center;
+
+
+}
+}

@@ -17,9 +17,14 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'stripe'
+gem 'pundit'
 
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+gem "jquery-slick-rails"
+gem 'coffee-rails', '~> 4.2'
+gem 'turbolinks'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

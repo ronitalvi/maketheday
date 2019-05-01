@@ -1,40 +1,73 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+ <%= link_to "/", class: "navbar-brand" do %>
+    <%= image_tag "header.png" %>
     <% end %>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "atolyeler", atolyelers_path, class: "nav-link" %>
+    <ul class="navbar-nav mr-auto ">
+
+        <li class="nav-item active"><p>
+
+          <%= link_to "ATÖLYELER", atolyelers_path, class: "nav-link" %>
+        </p>
         </li>
-        <li class="nav-item">
-          <%= link_to "atoyle satinal", satinals_path, class: "nav-link" %>
+        <li class="nav-item"><p>
+
+          <%= link_to "ATÖLYE SATIN AL", satinals_path, class: "nav-link" %>
+        </p>
         </li>
-         <li class="nav-item">
-          <%= link_to "atoyle takvimi", products_path, class: "nav-link" %>
+         <li class="nav-item"><p>
+
+          <%= link_to "AYLIK TAKVİM", products_path, class: "nav-link" %>
+         </p>
         </li>
+        <li class="nav-item"><p>
+
+          <%= link_to "İLETİŞİM", "/iletisim", class: "nav-link" %>
+        </p>
+        </li>
+        <li class="nav-item"><p>
+
+          <%= link_to "MAKE MY DAY NEDİR?", "/kimdir", class: "nav-link" %>
+        </p>
+        </li>
+        <li class="nav-item"><p>
+
+          <%= link_to "REFERANSLAR", "/referanslar", class: "nav-link" %>
+        </p>
+        </li>
+
+          <% if user_signed_in? %>
+        <li class="nav-item"><p>
+
+
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </p>
+        </li>
+         <% else %>
+        <li class="nav-item"><p>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </p>
+
+        </li>
+      <% end %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "header.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "iletisim", "/iletisim", class: "dropdown-item" %>
             <%= link_to "kimdir", "/kimdir", class: "dropdown-item" %>
             <%= link_to "referanslar", "/referanslar", class: "dropdown-item" %>
 
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
+
     </ul>
   </div>
 </div>
+
+
+

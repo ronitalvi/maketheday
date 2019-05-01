@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = policy_scope(Product).order(created_at: :desc)
   end
 
   def new
@@ -21,6 +22,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    authorize @product
   end
 
   def edit

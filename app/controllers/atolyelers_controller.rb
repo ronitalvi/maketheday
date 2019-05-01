@@ -1,11 +1,13 @@
 class AtolyelersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_atolyeler, only: [:show, :edit, :update, :destroy]
 
   def index
-    @atolyelers = Atolyeler.all
+    @atolyelers = policy_scope(Atolyeler).order(created_at: :desc)
   end
 
   def show
+    authorize @atolyeler
   end
 
   def new

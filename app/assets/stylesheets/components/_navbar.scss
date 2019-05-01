@@ -10,3 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+.navbar{
+  margin-bottom: 0;
+}
+
+// .nav{
+//   width: 100vw;
+//   background-color: #f0f0f0;
+
+
+.basr{
+   background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)), asset-url('banner.png');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+   height: 50vh;
+
+}
+
+
+.yy{
+  margin: 30px;
+}
